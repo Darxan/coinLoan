@@ -15,17 +15,17 @@
 export default {
   data() {
     return {
-      menuItems: [  
+      menuItems: [
         {id: 1, title: "Мой кошелёк", iconPath: "", path:"/wallet"},
-        {id: 1, title: "Накопительный счёт", iconPath: "", path:"/balance"},
-        {id: 1, title: "Мгновенный займ", iconPath: "", path:"/earn"},
-        {id: 1, title: "Мои кредиты", iconPath: "", path:"/credits"},
-        {id: 1, title: "Обмен криптовалюты", iconPath: "", path:"/"},
-        {id: 1, title: "Реферальная программа", iconPath: "", path:"/ref"},
-        {id: 1, title: "Мой кошелёк", iconPath: "", path:"/wallets"},
+        {id: 2, title: "Накопительный счёт", iconPath: "", path:"/balance"},
+        {id: 3, title: "Мгновенный займ", iconPath: "", path:"/earn"},
+        {id: 4, title: "Мои кредиты", iconPath: "", path:"/credits"},
+        {id: 5, title: "Обмен криптовалюты", iconPath: "", path:"/"},
+        {id: 6, title: "Реферальная программа", iconPath: "", path:"/ref"},
+        {id: 7, title: "Мой кошелёк", iconPath: "", path:"/wallets"},
       ]
     }
-    
+
   }
 }
 </script>
@@ -51,7 +51,7 @@ export default {
   &__item-icon{
     display:flex;
     align-items: center;
-    
+
   }
   &__item-icon img{
     width: 27px;

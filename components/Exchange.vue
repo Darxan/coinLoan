@@ -10,7 +10,7 @@
                     .form__title
                         h3 Обменять &nbsp;
                             strong(v-if="fromActive") {{ fromActive.currency.symbol }} на&nbsp;
-                            strong(v-if="toActive") {{ toActive.currency.symbol }} 
+                            strong(v-if="toActive") {{ toActive.currency.symbol }}
                     .form__inputs
                         p Вы платите
                         .form__input
@@ -20,8 +20,8 @@
                             p Доступно {{ fromActive.balance }}
                                 //- button.max_btn Half
                                 //- button.max_btn Max
-                               
-                        .form__exchange-icon 
+
+                        .form__exchange-icon
                             img(src="~/assets/icons/arrow-left-right-fill.svg" style="transform:rotate(272deg)")
                         p Вы получаете
                         .form__input
@@ -34,11 +34,11 @@
                     .info__title
                         h3 Краткое описание
                     .info__list
-                        span.info__text. 
+                        span.info__text.
                             Ваш {{ fromActive.currency.name }} баланс
                         span  {{ fromActive.balance }} {{ fromActive.currency.symbol }}
                     .info__list
-                        p.info__text. 
+                        p.info__text.
                             Ваш {{ toActive.currency.name }} баланс
                         span  {{ toActive.balance }} {{ toActive.currency.symbol }}
                     .info__list
@@ -54,7 +54,7 @@ export default {
     data() {
         return {
             userWallet: [
-                {
+              {
                     id:1, balance: 1.855, currency: {
                         name: "Bitcoin",
                         symbol: "BTC",
@@ -79,20 +79,19 @@ export default {
                     }
                 },
                 {
-                    id:4, 
-                    balance: 8000, 
+                    id:4,
+                    balance: 8000,
                     currency: {
                         name: "Tether",
                         symbol: "USDT",
                         usd_price: 1,
                         logo: "https://assets.coingecko.com/coins/images/325/thumb/Tether-logo.png?1598003707"
                     }
-                },
-                
+                }
             ],
             fromActive: {
-                    id:1, 
-                    balance: 1.855, 
+                    id:1,
+                    balance: 1.855,
                     currency: {
                         name: "Bitcoin",
                         symbol: "BTC",
@@ -161,8 +160,8 @@ export default {
                result = (this.fromActive.currency.usd_price * event.target.value) / this.toActive.currency.usd_price
                this.toAmount = result.toFixed(8)
            }
-             
-        } 
+
+        }
     },
     computed:{
         calculatePerPrice(){
@@ -173,17 +172,13 @@ export default {
             }
             return 0
         },
-        // getCommissionList(){
-            
-        //     return this.commissionData
-        // },
 
 
     }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .container{
     display:flex;
     align-items:start;
@@ -276,6 +271,6 @@ export default {
     &__button{
         margin-top: 3rem;
     }
-    
+
 }
 </style>
