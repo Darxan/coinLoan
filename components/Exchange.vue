@@ -142,7 +142,11 @@ export default {
     },
     methods: {
         exchangeHandler(){
-            alert("Exchange")
+            this.$toast.success('Подождите пожалуйста')
+            setTimeout(() => {
+              this.$toast.success('Успешно завершено!')
+            }, 1000)
+
         },
         dropDownCallback(item, type){
             if(type === "from") this.fromActive = item
